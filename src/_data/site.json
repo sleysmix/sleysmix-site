@@ -1,0 +1,19 @@
+{
+  "brandName": "Sleysmix Mobile Bartending",
+  "inquiryEmail": "sleysmix@gmail.com",
+  "calendlyUrl": "https://calendly.com/sleysmix/book-an-event",
+  "serviceArea": "Greater Houston, including Pearland and The Woodlands",
+  "serviceAreaShort": "Greater Houston",
+  "tabcCertified": true,
+  "clientProvides": "Client provides the alcohol (Texas regulations) and venue costs.",
+  "audience": ["Corporate events", "Nonprofits and foundations", "Weddings", "Private events"],
+  "domain": "[PENDING: domain]",
+  "accentOption": "A",
+  "logo": "logo.png",
+  "nav": [
+    { "label": "Home", "url": "/" },
+    { "label": "Services & Packages", "url": "/services/" },
+    { "label": "About", "url": "/about/" },
+    { "label": "Contact", "url": "/contact/" }
+  ]
+}

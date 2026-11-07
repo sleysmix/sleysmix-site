@@ -1,0 +1,71 @@
+---
+layout: base.njk
+title: Contact & Booking | Sleysmix Mobile Bartending
+description: Book a call or send an event inquiry to Sleysmix Mobile Bartending, serving Greater Houston.
+permalink: /contact/
+---
+<section class="section page-head">
+  <div class="wrap">
+    <h1>Book a call or send an inquiry</h1>
+    <p class="lede">Every event starts with a conversation. Final price by quote after a call.</p>
+  </div>
+</section>
+
+<section class="section section-tight">
+  <div class="wrap split contact">
+    <div>
+      <h2>Book a call</h2>
+      <p>Pick a time that works for you.</p>
+      <p>{% include "book-call.njk" %}</p>
+      <h2>Email</h2>
+      <p><a href="mailto:{{ site.inquiryEmail }}">{{ site.inquiryEmail }}</a></p>
+    </div>
+
+    <form class="form" name="inquiry" method="POST" action="/thanks/" data-netlify="true" netlify-honeypot="bot-field">
+      <h2>Send an inquiry</h2>
+      <p class="form-note">Fields marked <span aria-hidden="true">*</span><span class="visually-hidden">with an asterisk</span> are required.</p>
+      <input type="hidden" name="form-name" value="inquiry">
+      <p class="visually-hidden" aria-hidden="true">
+        <label>Leave this field empty <input name="bot-field" tabindex="-1" autocomplete="off"></label>
+      </p>
+      <div class="field">
+        <label for="f-name">Name <span aria-hidden="true">*</span></label>
+        <input id="f-name" name="name" type="text" autocomplete="name" required>
+      </div>
+      <div class="field">
+        <label for="f-email">Email <span aria-hidden="true">*</span></label>
+        <input id="f-email" name="email" type="email" autocomplete="email" required>
+      </div>
+      <div class="field">
+        <label for="f-phone">Phone (optional)</label>
+        <input id="f-phone" name="phone" type="tel" autocomplete="tel">
+      </div>
+      <div class="field-row">
+        <div class="field">
+          <label for="f-date">Event date <span aria-hidden="true">*</span></label>
+          <input id="f-date" name="event-date" type="date" required>
+        </div>
+        <div class="field">
+          <label for="f-guests">Guest count <span aria-hidden="true">*</span></label>
+          <input id="f-guests" name="guest-count" type="number" min="1" step="1" inputmode="numeric" required aria-describedby="f-guests-hint">
+          <p class="hint" id="f-guests-hint">A second bartender is required for 75+ guests.</p>
+        </div>
+      </div>
+      <div class="field">
+        <label for="f-type">Event type <span aria-hidden="true">*</span></label>
+        <select id="f-type" name="event-type" required>
+          <option value="">Choose one</option>
+          {%- for a in site.audience %}
+          <option>{{ a }}</option>
+          {%- endfor %}
+          <option>Other</option>
+        </select>
+      </div>
+      <div class="field">
+        <label for="f-message">Message <span aria-hidden="true">*</span></label>
+        <textarea id="f-message" name="message" rows="5" required></textarea>
+      </div>
+      <button class="btn" type="submit">Send inquiry</button>
+    </form>
+  </div>
+</section>

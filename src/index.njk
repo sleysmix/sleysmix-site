@@ -1,0 +1,59 @@
+---
+layout: base.njk
+title: Sleysmix Mobile Bartending | Mobile bar service in Greater Houston
+description: Mobile bartending for corporate events, nonprofits, weddings and private events across Greater Houston. TABC certified. Book a call to plan your bar.
+---
+<section class="hero">
+  <div class="wrap hero-inner">
+    <div class="hero-copy">
+      <h1>Mobile bartending for events across {{ site.serviceAreaShort }}</h1>
+      <p class="lede">For {{ site.audience | sentenceList | lower }} across {{ site.serviceArea }}.{% if site.tabcCertified %} TABC certified.{% endif %}</p>
+      {% include "book-call.njk" %}
+    </div>
+    <div class="hero-media">
+      {% image "hero-bar-0455.jpg", "A smiling bartender in a gold-patterned shirt behind a mobile bar with shakers, jiggers and a fresh drink at an evening outdoor event", "(min-width: 900px) 460px, 100vw", { eager: true, class: "ratio-4-5" } %}
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <h2>Who we serve</h2>
+    <ul class="audience">
+      {%- for a in site.audience %}
+      <li>{{ a }}</li>
+      {%- endfor %}
+    </ul>
+  </div>
+</section>
+
+<section class="section section-alt">
+  <div class="wrap">
+    <h2>Packages</h2>
+    <p>{{ packages.priceNote }}</p>
+    <ul class="teaser">
+      {%- for p in packages.packages %}
+      <li class="card">
+        <h3>{{ p.name }} package</h3>
+        <p class="price"><span class="price-label">Starting at</span> {{ p.startingPrice | usd }}</p>
+      </li>
+      {%- endfor %}
+    </ul>
+    <p><a class="text-link" href="/services/">See what each package includes</a></p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <h2>What clients say</h2>
+    <blockquote class="testimonial pending">[PENDING: testimonial]</blockquote>
+  </div>
+</section>
+
+<section class="section section-alt cta-band">
+  <div class="wrap">
+    <h2>Planning an event?</h2>
+    <p>Every event starts with a conversation, so the drink menu fits your guests and your occasion.</p>
+    <p class="cta-row">{% include "book-call.njk" %} <a class="text-link" href="/contact/">Or send an inquiry</a></p>
+  </div>
+</section>

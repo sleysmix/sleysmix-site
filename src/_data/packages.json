@@ -1,0 +1,45 @@
+{
+  "priceNote": "All prices are starting prices. Final price by quote after a call.",
+  "packages": [
+    {
+      "name": "Base",
+      "startingPrice": 500,
+      "features": [
+        "Up to 5 hours of service",
+        "Basic bar setup and service area",
+        "Standard cocktail service from a client-approved drink list",
+        "Pre-event coordination",
+        "One-on-one Zoom call"
+      ]
+    },
+    {
+      "name": "Second",
+      "startingPrice": 750,
+      "features": [
+        "Everything in Base",
+        "Custom signature cocktail menu",
+        "Enhanced menu presentation",
+        "Event-specific planning (bar decor and presentation)"
+      ]
+    },
+    {
+      "name": "Third",
+      "startingPrice": 1149,
+      "features": [
+        "Everything in Base and Second",
+        "Extended signature menu",
+        "Premium menu and presentation planning",
+        "Priority coordination for larger events (100+ guests)"
+      ]
+    }
+  ],
+  "addOns": [
+    { "name": "Shorter service", "startingPrice": 350 },
+    { "name": "Extra hours", "byQuote": true },
+    { "name": "Mocktail add-on", "byQuote": true },
+    { "name": "Water station", "byQuote": true },
+    { "name": "Second bartender", "byQuote": true, "note": "Required for 75+ guests." },
+    { "name": "Supplies and rentals", "note": "Ice, mixers, garnishes, cups." },
+    { "name": "Travel", "note": "Free for the first 40 miles, then $1 per mile." }
+  ]
+}

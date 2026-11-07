@@ -1,0 +1,38 @@
+backend:
+  name: github
+  repo: Blaqman713/sleysmix-site
+  branch: main
+  # STAGING (private repo). Switch to public_repo at the public flip. See LAUNCH-CHECKLIST.md
+  auth_scope: repo
+
+# Local testing only (npx decap-server). Decap ignores it when not on localhost.
+local_backend: true
+
+# Required by Decap; no image fields use them in v1.
+media_folder: "src/images/uploads"
+public_folder: "/images/uploads"
+
+collections:
+  - name: "settings"
+    label: "Packages & pricing"
+    files:
+      - name: "packages"
+        label: "Packages & pricing"
+        file: "src/_data/packages.json"
+        fields:
+          - { label: "Price note (shown under page headings)", name: "priceNote", widget: "string" }
+          - label: "Packages"
+            name: "packages"
+            widget: "list"
+            fields:
+              - { label: "Package name", name: "name", widget: "string" }
+              - { label: "Starting price ($)", name: "startingPrice", widget: "number", value_type: "int", min: 0 }
+              - { label: "What's included (one item per line)", name: "features", widget: "list", field: { label: "Item", name: "item", widget: "string" } }
+          - label: "Add-ons and fees"
+            name: "addOns"
+            widget: "list"
+            fields:
+              - { label: "Add-on name", name: "name", widget: "string" }
+              - { label: "Starting price ($), leave blank if none", name: "startingPrice", widget: "number", value_type: "int", min: 0, required: false }
+              - { label: "Priced by quote", name: "byQuote", widget: "boolean", required: false }
+              - { label: "Note (optional)", name: "note", widget: "string", required: false }

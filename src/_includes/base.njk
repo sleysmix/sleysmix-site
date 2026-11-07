@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en" data-accent="{{ site.accentOption | lower }}">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{ title }}</title>
+  <meta name="description" content="{{ description }}">
+  <meta name="robots" content="noindex, nofollow">
+  <!-- {{ site.domain }}: canonical URL and social tags are added once the domain is chosen. -->
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="brand" href="/">
+        {% image site.logo, "", "64px", { widths: [64, 128], png: true, eager: true, class: "brand-logo" } %}
+        <span class="brand-name">{{ site.brandName }}</span>
+      </a>
+      <nav class="site-nav" aria-label="Main">
+        <ul>
+          {%- for item in site.nav %}
+          <li><a href="{{ item.url }}"{% if page.url == item.url %} aria-current="page"{% endif %}>{{ item.label }}</a></li>
+          {%- endfor %}
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+{{ content | safe }}
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap footer-inner">
+      <div>
+        <p class="footer-brand">{{ site.brandName }}</p>
+        <p>Serving {{ site.serviceArea }}.{% if site.tabcCertified %} TABC certified.{% endif %}</p>
+        <p><a href="mailto:{{ site.inquiryEmail }}">{{ site.inquiryEmail }}</a></p>
+      </div>
+      <nav aria-label="Footer">
+        <ul>
+          {%- for item in site.nav %}
+          <li><a href="{{ item.url }}">{{ item.label }}</a></li>
+          {%- endfor %}
+        </ul>
+      </nav>
+    </div>
+    <p class="wrap copyright">&copy; {% year %} {{ site.brandName }}</p>
+  </footer>
+</body>
+</html>
