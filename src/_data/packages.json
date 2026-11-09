@@ -34,12 +34,34 @@
     }
   ],
   "addOns": [
-    { "name": "Shorter service", "startingPrice": 350 },
-    { "name": "Extra hours", "byQuote": true },
-    { "name": "Mocktail add-on", "byQuote": true },
-    { "name": "Water station", "byQuote": true },
-    { "name": "Second bartender", "byQuote": true, "note": "Required for 75+ guests." },
-    { "name": "Supplies and rentals", "note": "Ice, mixers, garnishes, cups." },
-    { "name": "Travel", "note": "Free for the first 40 miles, then $1 per mile." }
+    {
+      "name": "Shorter service",
+      "startingPrice": 350
+    },
+    {
+      "name": "Extra hours",
+      "byQuote": true
+    },
+    {
+      "name": "Mocktail add-on",
+      "byQuote": true
+    },
+    {
+      "name": "Water station",
+      "byQuote": true
+    },
+    {
+      "name": "Second bartender",
+      "byQuote": true,
+      "note": "Required for 75+ guests."
+    },
+    {
+      "name": "Supplies and rentals",
+      "note": "Ice, mixers, garnishes, cups."
+    },
+    {
+      "name": "Travel",
+      "note": "Free for the first 40 miles, then $1 per mile."
+    }
   ]
 }
