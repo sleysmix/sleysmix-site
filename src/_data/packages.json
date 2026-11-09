@@ -3,7 +3,7 @@
   "packages": [
     {
       "name": "Base",
-      "startingPrice": 501,
+      "startingPrice": 500,
       "features": [
         "Up to 5 hours of service",
         "Basic bar setup and service area",

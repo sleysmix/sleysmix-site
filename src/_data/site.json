@@ -8,7 +8,7 @@
   "clientProvides": "Client provides the alcohol (Texas regulations) and venue costs.",
   "audience": ["Corporate events", "Nonprofits and foundations", "Weddings", "Private events"],
   "domain": "[PENDING: domain]",
-  "accentOption": "A",
+  "accentOption": "B",
   "logo": "logo.png",
   "nav": [
     { "label": "Home", "url": "/" },
