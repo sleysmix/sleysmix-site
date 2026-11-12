@@ -19,6 +19,8 @@ permalink: /contact/
       <p>{% include "book-call.njk" %}</p>
       <h2>Email</h2>
       <p><a href="mailto:{{ site.inquiryEmail }}">{{ site.inquiryEmail }}</a></p>
+      <h2>Phone</h2>
+      <p><a href="{{ site.phoneHref }}">{{ site.phone }}</a></p>
     </div>
 
     <form class="form" name="inquiry" method="POST" action="/thanks/" data-netlify="true" netlify-honeypot="bot-field">

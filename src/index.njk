@@ -34,7 +34,7 @@ description: Mobile bartending for corporate events, nonprofits, weddings and pr
     <ul class="teaser">
       {%- for p in packages.packages %}
       <li class="card">
-        <h3>{{ p.name }} package</h3>
+        <h3>{{ p.name }}</h3>
         <p class="price"><span class="price-label">Starting at</span> {{ p.startingPrice | usd }}</p>
       </li>
       {%- endfor %}

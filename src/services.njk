@@ -17,7 +17,7 @@ permalink: /services/
     <ul class="packages">
       {%- for p in packages.packages %}
       <li class="card package">
-        <h3>{{ p.name }} package</h3>
+        <h3>{{ p.name }}</h3>
         <p class="price"><span class="price-label">Starting at</span> {{ p.startingPrice | usd }}</p>
         <ul class="checklist">
           {%- for f in p.features %}
