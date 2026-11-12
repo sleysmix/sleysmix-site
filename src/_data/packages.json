@@ -2,40 +2,39 @@
   "priceNote": "All prices are starting prices. Final price by quote after a call.",
   "packages": [
     {
-      "name": "Base",
+      "name": "The Kickback",
       "startingPrice": 500,
       "features": [
-        "Up to 5 hours of service",
-        "Basic bar setup and service area",
-        "Standard cocktail service from a client-approved drink list",
-        "Pre-event coordination",
-        "One-on-one Zoom call"
+        "Up to 5 hours of bartending service",
+        "Basic bar setup and service-area organization",
+        "Standard cocktail service using a client-approved drink list",
+        "Pre-event coordination to confirm timeline and service needs"
       ]
     },
     {
-      "name": "Second",
+      "name": "The Vibe Experience",
       "startingPrice": 750,
       "features": [
-        "Everything in Base",
-        "Custom signature cocktail menu",
-        "Enhanced menu presentation",
-        "Event-specific planning (bar decor and presentation)"
+        "Everything in The Kickback",
+        "Customized drink menu featuring selected cocktails",
+        "Signature cocktail selection tailored to the event",
+        "Enhanced menu presentation and event-specific planning"
       ]
     },
     {
-      "name": "Third",
+      "name": "Elite Sleysmix Experience",
       "startingPrice": 1149,
       "features": [
-        "Everything in Base and Second",
-        "Extended signature menu",
-        "Premium menu and presentation planning",
-        "Priority coordination for larger events (100+ guests)"
+        "Everything in The Vibe Experience",
+        "Expanded signature cocktail customization",
+        "Premium menu/presentation planning",
+        "Priority coordination for more detailed event requirements"
       ]
     }
   ],
   "addOns": [
     {
-      "name": "Shorter service",
+      "name": "Shorter service (2 hours)",
       "startingPrice": 350
     },
     {
@@ -57,7 +56,7 @@
     },
     {
       "name": "Supplies and rentals",
-      "note": "Ice, mixers, garnishes, cups."
+      "note": "Ice, mixers, garnishes, cups and other supplies are included only when listed in your quote."
     },
     {
       "name": "Travel",
