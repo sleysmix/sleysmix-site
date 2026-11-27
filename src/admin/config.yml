@@ -1,9 +1,9 @@
 backend:
   name: github
-  repo: Blaqman713/sleysmix-site
+  repo: sleysmix/sleysmix-site
   branch: main
-  # STAGING (private repo). Switch to public_repo at the public flip. See LAUNCH-CHECKLIST.md
-  auth_scope: repo
+  # Public repo (moved to Kingsley's GitHub Nov 27, 2026).
+  auth_scope: public_repo
 
 # Local testing only (npx decap-server). Decap ignores it when not on localhost.
 local_backend: true
